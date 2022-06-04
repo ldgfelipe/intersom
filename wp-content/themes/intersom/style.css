@@ -1,0 +1,638 @@
+/*
+
+Theme Name:intersom
+Theme URI::after
+
+Author:Ldg Felipe de Jesús Carrera Rendón
+
+Author URI: after
+
+Licence: GNI Generarl Public Licence or Later
+
+Tags: Html, mindTheme
+
+*/
+
+
+
+a, h1, h2, h3, h4, h5, body {
+
+/*    font-family: 'poppins';*/
+font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+
+.nav>li>a{
+
+    color:#000;
+
+    text-transform: uppercase;    
+
+    font-size: 12px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+
+nav ul li .sub-menu{
+
+    display:none;
+
+    position:absolute;
+
+    left:0px;
+
+    background-color: #fff;
+
+    color:#000;
+
+    list-style: none;
+
+    margin:0px;
+
+    padding:0px;
+
+    height:auto;
+
+    width: 200px;
+
+    text-align: center;
+
+    padding-left:10px;
+
+    z-index:99999999999999;
+
+    border-radius:0px 0px 10px 10px;
+
+}
+
+
+
+nav ul li .sub-menu li a{
+
+    text-decoration: none;
+
+    color:#000;
+
+}
+
+
+
+nav ul li:hover .sub-menu{
+
+    display:inline;
+
+}
+
+
+
+.logoimg{
+
+    max-width:170px;
+    width: 100%;
+    margin-top: 15px;
+
+}
+
+.tophead{
+    width: 100%;
+    max-width: 100%;
+
+}
+
+
+
+
+.socialicon{
+
+    max-width:50px;
+
+    padding-left:5px;
+
+    margin-right:10px;
+
+}
+
+
+
+.nav>li{
+
+    color:#000;
+
+    padding-top:20px;
+
+}
+
+.icon-bar{
+
+    background-color: #000;
+
+    border-radius:10px;
+
+}
+
+
+
+/* seccion2 */
+
+
+
+.section2{
+
+    padding:200px;
+
+    text-align:center;
+
+}
+
+
+
+.section2 div div img {
+
+    margin:0 auto;
+
+}
+
+
+
+/* seccion3 */
+
+
+
+.section3{
+
+    padding-top:15px; 
+
+    padding-bottom:15px;  
+
+}
+
+.section3 .row{
+
+    margin:0px; 
+
+
+
+}
+
+.section3 .secrow3{
+
+    height:auto;
+
+}
+
+
+
+
+
+.amarillosec{
+
+    background-color: #f5d232;
+
+    font-size: 20px;
+
+    height:100%;
+
+    padding:50px;
+
+    opacity:0.8;
+
+}
+
+
+
+
+
+
+
+.amarillosec  ul li{
+
+    list-style: none;
+
+    padding:10px;
+
+}
+
+
+
+/* seccion4 */
+
+
+
+.section4{
+
+    background-color: #bcbbbb;
+
+    margin-top:10%;
+
+    padding-left:10px;
+
+    padding-right:10px;
+
+    margin-bottom:10%;
+
+}
+
+
+
+.section4 img {
+
+    margin:0 auto;
+
+}
+
+/* seccion5 */
+
+
+
+.section5 .row{
+
+    margin:0px;
+
+}
+
+
+
+.section5 img{
+
+    margin:0 auto;
+
+}
+
+.section5 .backblack{
+
+    padding:8%;
+
+    background-color: #222222;
+
+    color:white;
+
+    height: auto;
+
+    opacity: 0.9;
+
+}
+
+
+
+.section5 .textsec{
+
+    margin:6%;
+
+    font-size:20px;
+
+
+
+}
+
+/* seccion6 */
+
+.section6{
+
+    margin-top:5%;
+
+    margin-bottom:5%;
+
+}
+
+.section6 .row{
+
+    margin:0px;
+
+}
+
+.section6 img{
+
+    margin:0 auto;
+
+}
+
+.section6 .backblack{
+
+    padding:8%;
+
+    background-color: #bcbabb;
+
+    color:black;
+
+    height: auto;
+
+    opacity: 0.9;
+
+}
+
+
+
+.section6 .textsec{
+
+    margin:6%;
+
+    font-size:20px;
+
+
+
+}
+
+
+
+/* seccion7 */
+
+
+
+
+
+.section7{
+
+    margin-top:5%;
+
+    margin-bottom:5%;
+
+}
+
+.section7 .row{
+
+    margin:0px;
+
+}
+
+.section7 img{
+
+    margin:0 auto;
+
+}
+
+.section7 .backblack{
+
+    padding:8%;
+
+    background-color: #222222;
+
+    color:white;
+
+    height: auto;
+
+    opacity: 0.9;
+
+}
+
+
+
+.section7 .textsec{
+
+    margin:6%;
+
+    font-size:20px;
+
+
+
+}
+
+
+
+/* section8 */
+
+.section8{
+
+    margin-top:5%;
+
+    margin-bottom:5%;
+
+    font-size:18px;
+
+}
+
+
+
+.section8 .row{
+
+    margin:0px;
+
+}
+
+
+
+.section8 ul{
+
+    list-style: none;
+
+}
+
+
+
+.section8 ul li{
+
+    padding-top:8px;
+
+}
+
+
+
+.section8 ul li::before {
+
+    content: "\2022";
+
+    color: #f5d232;
+
+    font-weight: bold;
+
+    display: inline-block; 
+
+    width: 1em;
+
+    margin-left: -1em;
+
+}
+
+
+
+.section8 .linesep{
+
+    height:8px;
+
+    width:100%;
+
+    max-width:800px;
+
+    margin:0 auto;
+
+    background-color:#f5d232;
+
+}
+
+
+
+/* section9 */
+
+.section9{
+
+    margin-top:5%;
+
+    margin-bottom:5%;
+
+    font-size:18px;
+
+}
+
+
+
+.section9 .row{
+
+    margin:0px;
+
+}
+
+
+
+.section9 .backblack{
+
+    padding:8%;
+
+    background-color: #813587;
+
+    color:white;
+
+    height: auto;
+
+    opacity: 0.9;
+
+}
+
+
+
+.section9 .headersecc{
+
+    background-color: #bcbbbb;
+
+    color:#fff;
+
+    text-align: center;
+
+    font-size:35px;
+
+}
+
+
+
+
+
+/* section10 */
+
+.section10{
+
+    margin-top:5%;
+
+    margin-bottom:5%;
+
+    font-size:18px;
+
+    background-color: #000;
+
+}
+
+
+
+.section10 .row{
+
+    margin:0px;
+
+    padding:5%;
+
+}
+
+
+
+.section10 .prom{
+
+    background-color: #000;
+
+
+
+}
+
+
+
+.section10 .prom .promint{
+
+    background-color: #f5d232;
+
+    padding-top:10%;
+
+    padding-left:10%;
+
+    padding-right:10%;
+
+    margin-bottom:10%;
+
+    height:750px;
+
+}
+
+.precio{
+
+    font-size:54px;
+
+    text-align:center;
+
+}
+
+.lineaborde{
+
+    border:solid 1px white;
+
+}
+
+
+
+/* btn */
+
+
+
+.btnblack{
+
+    margin:0 auto;
+
+    border-radius:10px;
+
+    background-color: #222;
+
+    color:#fff;
+
+    max-width:150px;
+
+    width:100%;
+
+    text-align:center;
+
+    padding:10px;
+
+    cursor:pointer;
+
+}
+
+
+
+/* footer */
+
+
+
+footer{
+    padding-top: 20px;
+    background-color: #295585;
+    color: #fff;
+
+}
+
+.redesfoot{
+    padding-top: 30px;
+}
+
+.redesfooter{
+    margin-bottom: 5px;
+}
