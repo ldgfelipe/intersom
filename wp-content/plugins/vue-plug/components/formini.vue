@@ -1,11 +1,12 @@
 <template>
 	<div>
-
+<form ref="formulario" action="/financiamiento">
 		<v-row>
 			<v-col cols="12" md="12" >
 			<h2>Ingresa tus datos y obtén una respuesta inmediata</h2>
 			</v-col>
 			<v-col cols="12" md="12">
+				
 					<v-text-field Outlined label="Datos Personales"  v-model="form.personales"></v-text-field>
 					<v-text-field Outlined label="¿Cómo estás dado de alta en el SAT?" v-model="form.sat"></v-text-field>
 					<v-text-field Outlined label="Documentos de Identificación" v-model="form.identificaciones"></v-text-field>
@@ -43,14 +44,19 @@ Aviso de Privacidad a través de este medio electrónico.
 			</v-col>
 
 			<v-col cols="6" md="6" class="text-center">
-				<v-btn class="primary">Solicita tu crédito</v-btn>
+				<v-btn class="primary" @click="validaFormulario('credito')" >Solicita tu crédito</v-btn>
 			</v-col>
 
 			<v-col cols="6" md="6" class="text-center">
-				<v-btn class="secondary">Simula tu crédito</v-btn>
+				<v-btn class="secondary" @click="validaFormulario('simulador')"  >Simula tu crédito</v-btn>
 			</v-col>
-
+			<v-col>
+				<v-chip class="red white--text" v-for="(row,index) in valid">
+					{{row}}
+				</v-chip>
+			</v-col>
 		</v-row>
+		</form>
 	</div>
 </template>
 <style>
@@ -62,12 +68,35 @@ body{
 module.exports={
 	data(){
 		return {
-			form:{}
+			form:{},
+			valid:[]
+	
 		}
 	},
 	methods:{
-		validaFormulario(){}
-
+		validaFormulario(p){
+			this.form.tipo=p
+			this.valid=[]
+			if(!this.form.personales) this.valid.push('Ingrese los datos personales')
+			if(!this.form.sat) this.valid.push('Ingrese datos del sat')
+			if(!this.form.identificaciones ) this.valid.push('Ingrese la identificación')
+			if(!this.form.domicilio) this.valid.push('Ingrese el domicilio')
+		
+			if(!this.form.correo) this.valid.push('Ingrese el correo')
+			if(!this.form.minicontra) this.valid.push('Debe aceptar las clausulas')
+			if(!this.form.terminosycondiciones) this.valid.push('Debe aceptar los terminos y condiciones')
+			if(this.valid.length===0){
+				this.enviardatos()
+			}else{
+				setTimeout(()=>{
+					this.valid=[]
+				},3000)
+			}
+		},
+		enviardatos(){
+			this.$refs.formulario.submit()
+		}
+		
 		}
 
 	}
