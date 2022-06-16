@@ -22,7 +22,7 @@ function func_load_vuescripts() {
     wp_register_script('vuerouter', plugin_dir_url( __FILE__ ).'js/vuerouter.js', 'vuedev', true );
     wp_register_script('httpVueLoader', plugin_dir_url( __FILE__ ).'js/httpVueLoader.js', 'vuedev', true );
     wp_register_script('vuex', plugin_dir_url( __FILE__ ).'js/vuex.js', 'vuex', true );
-    wp_register_script('my_vuecode', plugin_dir_url( __FILE__ ).'vuecode.js', 'vuedev', true );
+    wp_register_script('my_vuecode', plugin_dir_url( __FILE__ ).'vuecode.js', 'vuedev', false );
 
 
 }
@@ -36,7 +36,7 @@ function func_wp_vue($atts = []){
     wp_enqueue_style('vuetify');
     wp_enqueue_style('materialds');
 
-
+    wp_localize_script( 'my_vuecode', 'php_vars', $atts ); 
 
    //Add Vue.js
   wp_enqueue_script('vuedev');
@@ -46,15 +46,19 @@ function func_wp_vue($atts = []){
   wp_enqueue_script('httpVueLoader');
   wp_enqueue_script('vuex');
 
-  
+  $divApp="divWpVue";
     //Add my code to it
-  wp_enqueue_script('my_vuecode');
-
+  wp_enqueue_script('my_vuecode' );
+  
+  if(isset($atts['divapp']) && $atts['divapp']!=NULL){
+    $divApp=$atts['divapp'];
+  }
 
   //Build String
-  $str= "<div id='divWpVue'><v-app>
+  $str="<div  id='".$divApp."'><v-app>
   <".$atts['componente']." />"
-  ."</v-app></div>";
+  ."</v-app></div>
+  ";
 
   //Return
   return $str;
