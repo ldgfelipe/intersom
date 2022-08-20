@@ -55,9 +55,9 @@ function func_wp_vue($atts = []){
   }
 
   //Build String
-  $str="<div  id='".$divApp."'><v-app>
+  $str="<div  id='".$divApp."'>
   <".$atts['componente']." />"
-  ."</v-app></div>
+  ."</div>
   ";
 
   //Return

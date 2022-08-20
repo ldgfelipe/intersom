@@ -1,92 +1,190 @@
 <?php
+
 /**
+
  * The base configuration for WordPress
+
  *
- * The wp-config.php creation script uses this file during the
- * installation. You don't have to use the web site, you can
- * copy this file to "wp-config.php" and fill in the values.
+
+ * The wp-config.php creation script uses this file during the installation.
+
+ * You don't have to use the web site, you can copy this file to "wp-config.php"
+
+ * and fill in the values.
+
  *
+
  * This file contains the following configurations:
+
  *
- * * MySQL settings
+
+ * * Database settings
+
  * * Secret keys
+
  * * Database table prefix
+
  * * ABSPATH
+
  *
- * @link https://codex.wordpress.org/Editing_wp-config.php
+
+ * @link https://wordpress.org/support/article/editing-wp-config-php/
+
  *
+
  * @package WordPress
+
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
+
+// ** Database settings - You can get this info from your web host ** //
+
 /** The name of the database for WordPress */
-define('DB_NAME', 'cafe192034_aps30');
 
-/** MySQL database username */
-define('DB_USER', 'cafe192034_aps32');
+define( 'DB_NAME', "intersom_wp1" );
 
-/** MySQL database password */
-define('DB_PASSWORD', '4566523b80a5ee60');
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost:3306');
+/** Database username */
 
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
+define( 'DB_USER', "intersom_wp1" );
 
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+
+/** Database password */
+
+define( 'DB_PASSWORD', "FelreT2720·" );
+
+
+/** Database hostname */
+
+define( 'DB_HOST', "localhost" );
+
+
+/** Database charset to use in creating database tables. */
+
+define( 'DB_CHARSET', 'utf8' );
+
+
+/** The database collate type. Don't change this if in doubt. */
+
+define( 'DB_COLLATE', '' );
+
+define('JWT_AUTH_SECRET_KEY', 'your-top-secret-key');
 
 /**#@+
- * Authentication Unique Keys and Salts.
+
+ * Authentication unique keys and salts.
+
  *
- * Change these to different unique phrases!
- * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
- * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+
+ * Change these to different unique phrases! You can generate these using
+
+ * the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}.
+
  *
+
+ * You can change these at any point in time to invalidate all existing cookies.
+
+ * This will force all users to have to log in again.
+
+ *
+
  * @since 2.6.0
+
  */
-define('AUTH_KEY',         'V9J!f9QLy0fwW7CypZ9fstCCH9MRzYu#A5@l!mQC3N03I8ozdS!&*(!vL932D#BI');
-define('SECURE_AUTH_KEY',  'E86zfH(PyA290apXM20j(BS9fnbp4Qcd^gBT#W)PkcCPg(hN4TRVJhjfoXitiN0b');
-define('LOGGED_IN_KEY',    'NQP#kYvqsf!*jWy^RDcfhpj)%&65^eIe#Cm9SO#!7z&6L9UKL!kOs1NXw8Z60a8C');
-define('NONCE_KEY',        'YEC)JcFPbkkO8*d1JmVoSkwXwiDh*V^vX!iUAV9CvdM*QA&ixYDy%EA0(c4iYXpt');
-define('AUTH_SALT',        'SlBhOByAjX(NpO^q(OouQGlWapkK3O!bc6MnJqIFyLT4hY(3LC#r1Xs3HY!A^iiH');
-define('SECURE_AUTH_SALT', 'tkBCb@2fCJ48b4rjETWEWyVm^iodsfwb*PXPBvnud6lhi6jEkDr#CotQYNy6C96d');
-define('LOGGED_IN_SALT',   'rq&6#LTp4l!YcumhJ6SpucybBv%4rbA^rxKRzFsIK9Wl*Bxj%gfhbmZ@4Xn60bau');
-define('NONCE_SALT',       'jre8(96jgreXfpi(nIEvJSpoVeaTkeWrfJecIrlsvY%fwGnG%dy3i@6mip7XErvs');
+
+define('AUTH_KEY',         '5asXHDTQ0xDz6eHEBCOcFn5vf6HF2s4m5wUPNeNbZC60n1WHuId5ryNdo7FujmgF');
+
+define('SECURE_AUTH_KEY',  'MhhsB6J3iNfKJaAc2Exwe8DOoXc8cQ6AypgNaYRmocsWTK52vKPln3urB6PwRsBF');
+
+define('LOGGED_IN_KEY',    'wGCOAZJGydO0NmzD9hXUkEjVtkVJDrsX9Z40vcePb1gtGR7F0mgDcZONJqTAsU7z');
+
+define('NONCE_KEY',        'fflBxj86KWwWCC2M2B06qyjuq77jcFm7M8jPJ7sEQuDbgQ0EliXO3wBTIhFlSdnp');
+
+define('AUTH_SALT',        'fwNwNYBSyutSvEOCfUCTIg0KPnIvJfSpJSpQsjzWXrkW2yfii06dW6DY3Z5Mtf4i');
+
+define('SECURE_AUTH_SALT', 'fz5Kk6fb3yc63XWpx0ktdE7dLP5S58glxKXbTdJ3HCsIcVHI1EFW8oIifLYpyzrv');
+
+define('LOGGED_IN_SALT',   'VhGzq0YiBaISv5M2KtRoIwQoVbZwixI4Hogl9DMXGoAyhSYgmsbo4uprswUoV1bb');
+
+define('NONCE_SALT',       'DCW5cr5pv06jpJUkN7pdjA6InRapDF3ImsaKEIokvnhZmR8QCpApDmwC2ue9fg1u');
+
+
+/**
+
+ * Other customizations.
+
+ */
+
+define('FS_METHOD','direct');
+define('FS_CHMOD_DIR',0755);
+define('FS_CHMOD_FILE',0644);
+define('WP_TEMP_DIR',dirname(__FILE__).'/wp-content/uploads');
+
+
+
 /**#@-*/
 
+
 /**
- * WordPress Database Table prefix.
+
+ * WordPress database table prefix.
+
  *
+
  * You can have multiple installations in one database if you give each
+
  * a unique prefix. Only numbers, letters, and underscores please!
+
  */
-$table_prefix  = 'wp_';
+
+$table_prefix = 'wp_';
+
 
 /**
- * For developers: WordPress debugging mode.
- *
- * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use WP_DEBUG
- * in their development environments.
- *
- * For information on other constants that can be used for debugging,
- * visit the Codex.
- *
- * @link https://codex.wordpress.org/Debugging_in_WordPress
- */
-define('WP_DEBUG', false);
 
-/* That's all, stop editing! Happy blogging. */
+ * For developers: WordPress debugging mode.
+
+ *
+
+ * Change this to true to enable the display of notices during development.
+
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+
+ * in their development environments.
+
+ *
+
+ * For information on other constants that can be used for debugging,
+
+ * visit the documentation.
+
+ *
+
+ * @link https://wordpress.org/support/article/debugging-in-wordpress/
+
+ */
+
+define( 'WP_DEBUG', false );
+
+
+/* Add any custom values between this line and the "stop editing" line. */
+
+
+
+
+/* That's all, stop editing! Happy publishing. */
+
 
 /** Absolute path to the WordPress directory. */
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+
+if ( ! defined( 'ABSPATH' ) ) {
+
+	define( 'ABSPATH', __DIR__ . '/' );
+
+}
+
 
 /** Sets up WordPress vars and included files. */
-require_once(ABSPATH . 'wp-settings.php');
 
-define( 'WP_ALLOW_MULTISITE', true );
+require_once ABSPATH . 'wp-settings.php';
 
-define ('FS_METHOD', 'direct');
